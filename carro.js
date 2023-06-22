@@ -1,11 +1,15 @@
 // posição y dos carros
-let yCarros = [40, 96, 150];
+let yCarros = [40, 96, 150, 210, 265, 318];
 
 // velocidade dos carros
-let velocidadeCarros = [2, 3, 2.5];
+let velocidadeCarros = [2, 3, 2.5, 5, 3.3, 2.3];
 
 // posição x inicial dos carros
-let xCarro = [600, 600, 600];
+let xCarro = [600, 600, 600, 600, 600, 600];
+
+// comprimento e altura dos carros
+let comprimentoCarro = 50;
+let alturaCarro = 40;
 
 /**
  * Exibe as imagens dos carros em suas localizações específicas no canvas.
@@ -14,7 +18,7 @@ let xCarro = [600, 600, 600];
  */
 function mostraCarro(){
   for(let i = 0; i < imagenCarros.length; i++){
-    image(imagenCarros[i], xCarro[i], yCarros[i], 50, 40);
+    image(imagenCarros[i], xCarro[i], yCarros[i], comprimentoCarro, alturaCarro);
   }
 }
 
