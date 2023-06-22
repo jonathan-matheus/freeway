@@ -1,17 +1,11 @@
-// variaveis do carro 1
-let xCarro = 600;
-let yCarro = 40;
-let velocidadeCarro = 2;
+// posição y dos carros
+let yCarros = [40, 96, 150];
 
-// variaveis do carro 2
-let xCarro2 = 600;
-let yCarro2 = 96;
-let velocidadeCarro2 = 3;
+// velocidade dos carros
+let velocidadeCarros = [2, 3, 2.5];
 
-// variavel do carro 3
-let xCarro3 = 600;
-let yCarro3 = 150;
-let velocidadeCarro3 = 2.5;
+// posição x inicial dos carros
+let xCarro = [600, 600, 600];
 
 /**
  * Exibe uma imagem de um carro em uma localização específica no canvas.
@@ -19,9 +13,9 @@ let velocidadeCarro3 = 2.5;
  * @return {void} Esta função não retorna um valor.
  */
 function mostraCarro(){
-  image(imagenCarro, xCarro, yCarro, 50, 40);
-  image(imagenCarro2, xCarro2, yCarro2, 50, 40);
-  image(imagenCarro3, xCarro3, yCarro3, 50, 40);
+  image(imagenCarro, xCarro[0], yCarros[0], 50, 40);
+  image(imagenCarro2, xCarro[1], yCarros[1], 50, 40);
+  image(imagenCarro3, xCarro[2], yCarros[2], 50, 40);
 }
 
 /**
@@ -30,21 +24,21 @@ function mostraCarro(){
  * @return {void} Esta função não retorna nada.
  */
 function movimentaCarro(){
-  xCarro -= velocidadeCarro;
-  xCarro2 -= velocidadeCarro2;
-  xCarro3 -= velocidadeCarro3;
+  xCarro[0] -= velocidadeCarros[0];
+  xCarro[1] -= velocidadeCarros[1];
+  xCarro[2] -= velocidadeCarros[2];
 }
 
 function voltaPosicaoInicialDoCarro(){
-  if(xCarro < -50){
-    xCarro = 600;
+  if(xCarro[0] < -50){
+    xCarro[0] = 600;
   }
 
-  if(xCarro2 < -50){
-    xCarro2 = 600;
+  if(xCarro[1] < -50){
+    xCarro[1] = 600;
   }
 
-  if(xCarro3 < -50){
-    xCarro3 = 600;
+  if(xCarro[2] < -50){
+    xCarro[2] = 600;
   }
 }
