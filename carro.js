@@ -8,37 +8,47 @@ let velocidadeCarros = [2, 3, 2.5];
 let xCarro = [600, 600, 600];
 
 /**
- * Exibe uma imagem de um carro em uma localização específica no canvas.
+ * Exibe as imagens dos carros em suas localizações específicas no canvas.
  *
  * @return {void} Esta função não retorna um valor.
  */
 function mostraCarro(){
-  image(imagenCarro, xCarro[0], yCarros[0], 50, 40);
-  image(imagenCarro2, xCarro[1], yCarros[1], 50, 40);
-  image(imagenCarro3, xCarro[2], yCarros[2], 50, 40);
+  for(let i = 0; i < imagenCarros.length; i++){
+    image(imagenCarros[i], xCarro[i], yCarros[i], 50, 40);
+  }
 }
 
 /**
- * Move o carro para a esquerda, diminuindo sua posição x em 2.
+ * Move os carros para a esquerda, diminuindo sua posição x.
  *
  * @return {void} Esta função não retorna nada.
  */
 function movimentaCarro(){
-  xCarro[0] -= velocidadeCarros[0];
-  xCarro[1] -= velocidadeCarros[1];
-  xCarro[2] -= velocidadeCarros[2];
+  for(let i = 0; i < imagenCarros.length; i++){
+    xCarro[i] -= velocidadeCarros[i];
+  } 
 }
 
+/**
+ * Move os carros de volta para sua posição inicial sempre que ele sai da tela 
+ * 
+ * @return {void} Esta função não retorna nada.
+ */
 function voltaPosicaoInicialDoCarro(){
-  if(xCarro[0] < -50){
-    xCarro[0] = 600;
-  }
+  for(let i = 0; i < imagenCarros.length; i++){
+    if(passouTodaATela(xCarro[i])){
+      xCarro[i] = 600;
+    }
+  } 
+}
 
-  if(xCarro[1] < -50){
-    xCarro[1] = 600;
-  }
-
-  if(xCarro[2] < -50){
-    xCarro[2] = 600;
-  }
+/**
+ * Verifica se o valor xCarro fornecido é menor que -50, indicando que todo o 
+ * carro passou da tela.
+ *
+ * @param {number} xCarro - O valor da coordenada x do carro.
+ * @return {boolean} Retorna true somente se todo o carro passou da tela
+ */
+function passouTodaATela(xCarro){
+  return xCarro < -50;
 }
