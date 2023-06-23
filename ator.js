@@ -22,7 +22,7 @@ function movimentaAtor(){
   if (keyIsDown(UP_ARROW)){
     yAtor -= 3;
   }
-  if (keyIsDown(DOWN_ARROW)){
+  if (keyIsDown(DOWN_ARROW) & podeSeMover()){
     yAtor += 3;
   }
 }
@@ -37,6 +37,9 @@ function verficaColisao(){
     colisao = collideRectCircle(xCarro[i], yCarros[i], comprimentoCarro, alturaCarro, xAtor, yAtor, 15);
     if(colisao){
       voltaAtorParaPosicaoInicial();
+      if(pontosMaiorQueZero()){
+        meusPontos -= 1;
+      }
     }
   }
 }
@@ -67,4 +70,17 @@ function marcaPontos(){
     meusPontos += 1;
     voltaAtorParaPosicaoInicial();
   }
+}
+
+/**
+ * Verifica se o valor de "meusPontos" é maior que zero.
+ *
+ * @return {boolean} Retorna true se "meusPontos" for maior que zero.
+ */
+function pontosMaiorQueZero(){
+  return meusPontos > 0;
+}
+
+function podeSeMover(){
+  return yAtor < 366;
 }
