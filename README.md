@@ -22,8 +22,8 @@ Apenas faça o download do código fonte, e depois execute em seu navegador, a p
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" />
 
 # Como contribuir
-1. Faça um fork do projeto: https://github.com/jonathan-matheus/pong
-2. Clone o seu fork para sua maquina: `git clone https://github.com/jonathan-matheus/pong`
+1. Faça um fork do projeto: https://github.com/jonathan-matheus/freeway 
+2. Clone o seu fork para sua maquina: `git clone git@github.com:jonathan-matheus/freeway.git `
 3. Crie uma branch para realizar sua modificação: `git checkout -b name_new_feature`
 4. Adicione suas modificações e faça commit: `git commit -m "Descreva sua modificação"`
 5. Push: `git push origin name_new_feature`
