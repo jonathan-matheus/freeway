@@ -39,4 +39,4 @@ Apenas faça o download do código fonte, e depois execute em seu navegador, a p
 - [Dev Icons](https://devicon.dev/)
 
 # Licença
-Projeto publicado em 2023 sobre licença [MIT](LICENCE.txt)
+Projeto publicado em 2023 sobre licença [MIT](LICENSE.txt)
